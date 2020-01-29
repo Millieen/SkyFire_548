@@ -1365,7 +1365,7 @@ int32 Player::getMaxTimer(MirrorTimerType timer)
             if (!IsAlive() || HasAuraType(SPELL_AURA_WATER_BREATHING) || GetSession()->GetSecurity() >= AccountTypes(sWorld->getIntConfig(CONFIG_DISABLE_BREATHING)))
                 return DISABLED_MIRROR_TIMER;
             int32 UnderWaterTime = 3 * MINUTE * IN_MILLISECONDS;
-            AuraEffectList const& mModWaterBreathing = GetAuraEffectsByType(SPELL_AURA_MOD_WATER_BREATHING);
+            AuraEffectList const& mModWaterBreathing = GetAuraEffectsByType(SPELL_AURA_155);
             for (AuraEffectList::const_iterator i = mModWaterBreathing.begin(); i != mModWaterBreathing.end(); ++i)
                 AddPct(UnderWaterTime, (*i)->GetAmount());
             return UnderWaterTime;
